@@ -1,3 +1,4 @@
+<!DOCTYPE html
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
@@ -9,43 +10,37 @@
     <style>
         * { font-family: 'Vazirmatn', sans-serif; box-sizing: border-box; }
         .gradient-bg { background: linear-gradient(135deg, #1e40af 0%, #3b82f6 50%, #60a5fa 100%); }
-        .service-card { transition: all 0.3s ease; }
-        .service-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); }
-        .animate-pulse-slow { animation: pulse 3s cubic-bezier(0.4,0,0.6,1) infinite; }
-        .service-img-container { width:100%; height:220px; background:#e5e7eb; border-radius:0.5rem; margin-bottom:1rem; display:flex; align-items:center; justify-content:center; }
-        .service-img { width:100%; max-height:100%; object-fit:contain; }
+        .service-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); transition: 0.3s; }
+        .animate-pulse-slow { animation: pulse 3s infinite; }
+        .service-img-container { width:100%; height:220px; background:#e5e7eb; border-radius:0.5rem; margin-bottom:1rem; display:flex; align-items:center; justify-content:center; overflow:hidden; }
+        .service-img { max-width:100%; max-height:100%; object-fit:contain; }
     </style>
 </head>
 <body class="bg-gray-50">
 
 <header class="gradient-bg text-white shadow-lg">
-    <nav class="container mx-auto px-6 py-4">
-        <div class="flex justify-between items-center">
-            <div class="flex items-center space-x-4 space-x-reverse">
-                <div class="bg-white p-2 rounded-lg">
-                    <svg class="w-8 h-8 text-blue-600" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M12 2L2 7v10c0 5.55 3.84 9.74 9 11 5.16-1.26 9-5.45 9-11V7l-10-5z"/>
-                        <path d="M12 8v8m-4-4h8"/>
-                    </svg>
-                </div>
-                <h1 class="text-2xl font-bold">آچارین</h1>
+    <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+        <div class="flex items-center gap-4">
+            <div class="bg-white p-2 rounded-lg">
+                <svg class="w-8 h-8 text-blue-600" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L2 7v10c0 5.55 3.84 9.74 9 11 5.16-1.26 9-5.45 9-11V7l-10-5z"/><path d="M12 8v8m-4-4h8"/></svg>
             </div>
-            <div class="hidden md:flex space-x-6 space-x-reverse">
-                <a href="#services" class="hover:text-blue-200">خدمات</a>
-                <a href="#about" class="hover:text-blue-200">درباره ما</a>
-                <a href="#contact" class="hover:text-blue-200">تماس</a>
-            </div>
+            <h1 class="text-2xl font-bold">آچارین</h1>
+        </div>
+        <div class="hidden md:flex gap-8">
+            <a href="#services" class="hover:text-blue-200">خدمات</a>
+            <a href="#about" class="hover:text-blue-200">درباره ما</a>
+            <a href="#contact" class="hover:text-blue-200">تماس</a>
         </div>
     </nav>
 </header>
 
-<section class="gradient-bg text-white py-20">
-    <div class="container mx-auto px-6 text-center">
+<section class="gradient-bg text-white py-20 text-center">
+    <div class="container mx-auto px-6">
         <h2 class="text-5xl font-bold mb-6">خدمات برقکاری و سیم‌کشی</h2>
         <p class="text-xl mb-8 max-w-2xl mx-auto">با بیش از ۱۰ سال تجربه، تمامی خدمات برقکاری شما را با بالاترین کیفیت و ایمنی انجام می‌دهیم</p>
-        <div class="flex justify-center space-x-4 space-x-reverse">
-            <button onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})" class="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100">درخواست خدمات</button>
-            <button onclick="document.getElementById('services').scrollIntoView({behavior:'smooth'})" class="border-2 border-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600">مشاهده خدمات</button>
+        <div class="flex justify-center gap-4 flex-wrap">
+            <button onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})" class="bg-white text-blue-600 px-8 py-3 rounded-lg font-bold hover:bg-gray-100">درخواست خدمات</button>
+            <button onclick="document.getElementById('services').scrollIntoView({behavior:'smooth'})" class="border-2 border-white px-8 py-3 rounded-lg font-bold hover:bg-white hover:text-blue-600">مشاهده خدمات</button>
         </div>
     </div>
 </section>
@@ -56,71 +51,54 @@
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
 
             <div class="service-card bg-white p-6 rounded-xl shadow-lg border">
-                <div class="service-img-container">
-                    <img src="/imeg/sim%20keshi.jpg" alt="سیم‌کشی ساختمان" class="service-img">
-                </div>
-                <h4 class="text-xl font-semibold mb-3">سیم‌کشی ساختمان</h4>
-                <p class="text-gray-600 mb-4">ارائه کلیه خدمات مربوط به سیم‌کشی و زیرساخت برق ساختمان از رفع اتصالی تا اجرای نورپردازی مدرن</p>
-                <ul class="text-sm text-gray-500 space-y-1"><li>• رفع اتصالی</li><li>• سیم کشی و کابل کشی</li><li>• طراحی و اجرای نور مخفی</li><li>• نصب داکت و تراکینگ</li><li>• نصب و تعمیر آنتن</li><li>• نصب و تعویض کلید و پریز</li><li>• نصب استابلایزر</li></ul>
+                <div class="service-img-container"><img src="/imeg/sim%20keshi.jpg" alt="سیم‌کشی ساختمان" class="service-img"></div>
+                <h4 class="text-xl font-bold mb-3">سیم‌کشی ساختمان</h4>
+                <p class="text-gray-600 text-sm leading-relaxed">ارائه کلیه خدمات سیم‌کشی، رفع اتصالی، نورپردازی و …</p>
             </div>
 
             <div class="service-card bg-white p-6 rounded-xl shadow-lg border">
-                <div class="service-img-container">
-                    <img src="/imeg/tablo%20bargh.jpg" alt="نصب تابلو برق" class="service-img">
-                </div>
-                <h4 class="text-xl font-semibold mb-3">نصب تابلو برق</h4>
+                <div class="service-img-container"><img src="/imeg/tablo%20bargh.jpg" alt="نصب تابلو برق" class="service-img"></div>
+                <h4 class="text-xl font-bold mb-3">نصب تابلو برق</h4>
             </div>
 
             <div class="service-card bg-white p-6 rounded-xl shadow-lg border">
-                <div class="service-img-container">
-                    <img src="/imeg/pump%20ab.jpg" alt="نصب و تعمیرات پمپ آب" class="service-img">
-                </div>
-                <h4 class="text-xl font-semibold mb-3">نصب و تعمیرات پمپ آب</h4>
+                <div class="service-img-container"><img src="/imeg/pump%20ab.jpg" alt="پمپ آب" class="service-img"></div>
+                <h4 class="text-xl font-bold mb-3">نصب و تعمیرات پمپ آب</h4>
             </div>
 
             <div class="service-card bg-white p-6 rounded-xl shadow-lg border">
-                <div class="service-img-container">
-                    <img src="/imeg/sanati.jpg" alt="برق صنعتی" class="service-img">
-                </div>
-                <h4 class="text-xl font-semibold mb-3">خدمات برق صنعتی و سه‌فاز</h4>
+                <div class="service-img-container"><img src="/imeg/sanati.jpg" alt="برق صنعتی" class="service-img"></div>
+                <h4 class="text-xl font-bold mb-3">خدمات برق صنعتی و سه‌فاز</h4>
             </div>
 
             <div class="service-card bg-white p-6 rounded-xl shadow-lg border">
-                <div class="service-img-container">
-                    <img src="/imeg/loster.jpg" alt="لوستر و چراغ" class="service-img">
-                </div>
-                <h4 class="text-xl font-semibold mb-3">نصب لوستر و چراغ</h4>
+                <div class="service-img-container"><img src="/imeg/loster.jpg" alt="لوستر" class="service-img"></div>
+                <h4 class="text-xl font-bold mb-3">نصب لوستر و چراغ</h4>
             </div>
 
             <div class="service-card bg-white p-6 rounded-xl shadow-lg border">
-                <div class="service-img-container">
-                    <img src="/imeg/tamirate%20barghi.jpg" alt="تعمیرات برقی" class="service-img">
-                </div>
-                <h4 class="text-xl font-semibold mb-3">تعمیرات برقی</h4>
+                <div class="service-img-container"><img src="/imeg/tamirate%20barghi.jpg" alt="تعمیرات برقی" class="service-img"></div>
+                <h4 class="text-xl font-bold mb-3">تعمیرات برقی</h4>
             </div>
 
             <div class="service-card bg-white p-6 rounded-xl shadow-lg border">
-                <div class="service-img-container">
-                    <img src="/imeg/koler%20abi%20gazi.png" alt="کولر آبی و گازی" class="service-img">
-                </div>
-                <h4 class="text-xl font-semibold mb-3">کولر آبی و گازی</h4>
+                <div class="service-img-container"><img src="/imeg/koler%20abi%20gazi.png" alt="کولر" class="service-img"></div>
+                <h4 class="text-xl font-bold mb-3">کولر آبی و گازی</h4>
             </div>
 
             <div class="service-card bg-white p-6 rounded-xl shadow-lg border">
-                <div class="service-img-container">
-                    <img src="/imeg/hefazati.png" alt="سیستم حفاظتی" class="service-img">
-                </div>
-                <h4 class="text-xl font-semibold mb-3">سیستم های حفاظتی</h4>
+                <div class="service-img-container"><img src="/imeg/hefazati.png" alt="سیستم حفاظتی" class="service-img"></div>
+                <h4 class="text-xl font-bold mb-3">سیستم های حفاظتی</h4>
             </div>
 
         </div>
     </div>
 </section>
 
-<!-- بخش‌های درباره ما، تماس و فوتر رو همون قبلی نگه دار -->
+<!-- بقیه بخش‌ها (درباره ما، تماس، فوتر) رو هم دلت خواست می‌تونی نگه داری، ولی حداقل این بالا کافیه -->
 
-<footer class="bg-gray-800 text-white py-12 text-center text-gray-400">
-    <p>© ۱۴۰۳ آچارین - خدمات برقکاری تهران</p>
+<footer class="bg-gray-800 text-white py-8 text-center">
+    <p>© ۱۴۰۳ آچارین - خدمات برقکاری تهران | تماس: 09383270432</p>
 </footer>
 
 </body>
